@@ -6,7 +6,7 @@ on:
 jobs:
   lint:
     runs-on: ubuntu-latest
-    step:
+    steps:
       - name: Get code
         uses: actions/checkout@v3
       - name: Cache dependencies
@@ -19,7 +19,7 @@ jobs:
         run: npm ci
       - name: Lint code
         run: npm run lint
-  test:
+  tests:
     runs-on: ubuntu-latest
     steps:
       - name: Get code
